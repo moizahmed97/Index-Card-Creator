@@ -6,3 +6,7 @@ Title : Some title here
 Topics : All the Topics here
 Idea : Some brilliant Idea to win the Noble Prize
 ~
+Title : Coding Practice 
+Topics : Programming
+Idea : Use function this way {}
+~

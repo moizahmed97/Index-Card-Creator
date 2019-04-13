@@ -131,10 +131,23 @@ public class CreateIndexCard extends Application {
                 }
 
                 showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Success!", "Index Card Saved");
+               
                 // ADD CODE TO SAVE THE INDEX CARD IN A FILE HERE 
                 
-                 BufferedWriter bw = null;
-      try {
+                
+                 String title = titleField.getText();
+                 String topics = topicField.getText();
+                 String idea = ideaField.getText();
+                 
+                 saveIndexCard(title, topics, idea);           
+
+            }
+
+            
+            
+            private void saveIndexCard(String title, String topics, String idea) {
+                BufferedWriter bw = null;                
+                      try {
 	 String mycontent =  
                             "Title : " + titleField.getText() + " \r\n" + 
                             "Topics : " + topicField.getText() + "\r\n" +
@@ -172,11 +185,12 @@ public class CreateIndexCard extends Application {
 	       System.out.println("Error in closing the BufferedWriter"+ex);
 	    }
 	}
-                
-
-            }
-        });
+            }   // end of saveIndexCard Method   
+        
+        
+        });  // end of button submit handler
     }
+    
 
     private void showAlert(Alert.AlertType alertType, Window owner, String title, String message) {
         Alert alert = new Alert(alertType);
@@ -186,6 +200,7 @@ public class CreateIndexCard extends Application {
         alert.initOwner(owner);
         alert.show();
     }
+    
 
     public static void main(String[] args) {
         launch(args);
