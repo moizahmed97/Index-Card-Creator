@@ -132,23 +132,17 @@ public class CreateIndexCard extends Application {
 
                 showAlert(Alert.AlertType.CONFIRMATION, gridPane.getScene().getWindow(), "Success!", "Index Card Saved");
                
-                // ADD CODE TO SAVE THE INDEX CARD IN A FILE HERE 
-                
-                
-                 String title = titleField.getText();
-                 String topics = topicField.getText();
-                 String idea = ideaField.getText();
-                 
-                 saveIndexCard(title, topics, idea);           
+                       
+                 // method to save index card
+                 saveIndexCard();           
 
             }
 
-            
-            
-            private void saveIndexCard(String title, String topics, String idea) {
+                 
+            private void saveIndexCard() {
                 BufferedWriter bw = null;                
                       try {
-	 String mycontent =  
+	 String mycontent =  // specify format in which the index card should be saved in the txt file
                             "Title : " + titleField.getText() + " \r\n" + 
                             "Topics : " + topicField.getText() + "\r\n" +
                             "Idea : " + ideaField.getText() + "\r\n" + "~" + "\r\n"  ;

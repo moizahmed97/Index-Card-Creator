@@ -10,3 +10,7 @@ Title : Coding Practice
 Topics : Programming
 Idea : Use function this way {}
 ~
+Title : Title 
+Topics : Topic
+Idea : Idea
+~
